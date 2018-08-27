@@ -139,6 +139,8 @@
       <DependentUpon>20180820233144_Criacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MovieContextModelSnapshot.cs" />
+    <Compile Include="PL\Actor.cs" />
+    <Compile Include="PL\ActorMovie.cs" />
     <Compile Include="PL\Genre.cs" />
     <Compile Include="PL\Movie.cs" />
     <Compile Include="PL\MovieContext.cs" />
