@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExercicioEFCoreCodeFirst.PL
 {
-    class ActorMovie
+    public class ActorMovie
     {
         public int ActorMovieId { get; set; }
         public string Character { get; set; }
