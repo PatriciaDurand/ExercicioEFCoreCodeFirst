@@ -16,5 +16,6 @@ namespace ExercicioEFCoreCodeFirst.PL
         public double Rating { get; set; }
         public int GenreID { get; set; }
         public Genre Genre { get; set; }
+        public ICollection<ActorMovie> MoviesActorList { get; set; }
     }
 }
