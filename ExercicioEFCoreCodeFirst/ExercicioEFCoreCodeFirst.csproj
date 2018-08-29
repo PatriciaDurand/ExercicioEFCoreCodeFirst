@@ -138,6 +138,10 @@
     <Compile Include="Migrations\20180820233144_Criacao.designer.cs">
       <DependentUpon>20180820233144_Criacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20180829235605_Atualizando.cs" />
+    <Compile Include="Migrations\20180829235605_Atualizando.designer.cs">
+      <DependentUpon>20180829235605_Atualizando.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\MovieContextModelSnapshot.cs" />
     <Compile Include="PL\Actor.cs" />
     <Compile Include="PL\ActorMovie.cs" />
