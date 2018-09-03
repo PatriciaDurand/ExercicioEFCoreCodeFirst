@@ -20,6 +20,23 @@ namespace ExercicioEFCoreCodeFirst
                 }
                 #endregion
                 #region consultas
+
+                Console.WriteLine();
+                Console.WriteLine("Digite o filme que você deseja listar o elenco");
+                string filmes = Console.ReadLine();
+
+                var actorFilmes = db.Movies.Where(m => m.Title.ToUpper().Equals(filmes.ToUpper()));
+
+                //foreach (Movie filme in actorFilmes)
+                //{
+                //    var actorFilmes2 = db.ActorMovies.ToList();
+
+                //    foreach (ActorMovie actor in actorFilmes2)
+                //    {
+                //        var actorFilmes3 = db.Actors.Where(n => n.ActorId == actorFilmes2. );
+                //    }
+                //}
+
                 Console.WriteLine();
                 Console.WriteLine("Todos os gêneros da base de dados (press any key...):");
                 Console.ReadKey();
