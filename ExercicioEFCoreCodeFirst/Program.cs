@@ -25,17 +25,27 @@ namespace ExercicioEFCoreCodeFirst
                 Console.WriteLine("Digite o filme que você deseja listar o elenco");
                 string filmes = Console.ReadLine();
 
-                var actorFilmes = db.Movies.Where(m => m.Title.ToUpper().Equals(filmes.ToUpper()));
+                Movie films = db.Movies.Where(m => m.Title.ToUpper().Equals(filmes.ToUpper())).Single();
+                var actors = db.Actors.ToList();
 
-                //foreach (Movie filme in actorFilmes)
-                //{
-                //    var actorFilmes2 = db.ActorMovies.ToList();
+                foreach (Actor actor in actors)
+                {
+                    Console.WriteLine(films.ID);
+                    Console.WriteLine(actor.ActorId);
+                    var actorFilms = db.Characters.Where(n => n.ActorId == actor.ActorId && n.MovieId == films.ID).ToList();
+                    foreach (ActorMovie actorMovie in actorFilms)
+                    {
+                        Console.WriteLine(actorMovie.Character);
+                    }
+                }
 
-                //    foreach (ActorMovie actor in actorFilmes2)
-                //    {
-                //        var actorFilmes3 = db.Actors.Where(n => n.ActorId == actorFilmes2. );
-                //    }
-                //}
+                Console.WriteLine();
+                Console.WriteLine("Listar todos os atores que já desempenharam um determinado personagem");
+                Console.WriteLine("(por exemplo, quem foram todos os “agentes 007”?");
+                string personagem = Console.ReadLine();
+
+                //--------------------------------------------
+
 
                 Console.WriteLine();
                 Console.WriteLine("Todos os gêneros da base de dados (press any key...):");
